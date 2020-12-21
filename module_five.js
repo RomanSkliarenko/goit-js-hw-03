@@ -1,5 +1,7 @@
 "use strict";
 // Напиши функцію getAllPropValues(arr, prop), яка отримує масив об'єктів і ім'я властивості. Повертає масив значень певної властивості prop з кожного об'єкта в масиві.
+// item[prop] ? itemValue.push(item[prop])
+// : ""
 
 const products = [
   { name: "Радар", price: 1300, quantity: 4 },
@@ -11,13 +13,14 @@ const products = [
 const getAllPropValues = function (arr, prop) {
   let itemValue = [];
   for (const item of arr) {
-    if (prop === "name") {
-      itemValue.push(item.name);
-    } else if (prop === "quantity") {
-      itemValue.push(item.quantity);
-    } else if (prop === "category") {
-      itemValue = [];
-    }
+    // if (prop === "name") {
+    //   itemValue.push(item.name);
+    // } else if (prop === "quantity") {
+    //   itemValue.push(item.quantity);
+    // } else if (prop === "category") {
+    //   itemValue = [];
+    // }
+    item[prop] ? itemValue.push(item[prop]) : ""; //спасибо за подсказку, вариант с тернарником смотритяс лучше)
   }
   return itemValue;
 };

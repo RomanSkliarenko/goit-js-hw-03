@@ -11,19 +11,13 @@ const user = {
   age: 20,
   hobby: "html",
   premium: true,
-  newHobby(hobbyValue) {
-    this.hobby = hobbyValue;
-  },
-  newPremiun(premiumValue) {
-    this.premium = premiumValue;
-  },
 };
+
+user.mod = "happy";
+user.hobby = "skydiving";
+user.premium = false;
 
 const userKeys = Object.keys(user);
 for (const key of userKeys) {
   console.log(`${key} ${user[key]}`);
 }
-
-user.mod = "happy";
-user.newHobby("skydiving"); // или usre.hobby = "skydiving"; и убрать функцию внутри чтоб не мешала в consol.log
-user.newPremiun(false); // или user.premium = false; и убрать функцию внутри чтоб не мешала в consol.log

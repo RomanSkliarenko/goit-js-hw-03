@@ -2,12 +2,17 @@
 // Напиши функцію countTotalSalary(employees) приймаючу об'єкт зарплат. Функція рахує загальну суму зарплати працівників і повертає її. Кожне поле об'єкта, переданого в функцію, має вигляд "ім'я":"зарплата".
 
 const countTotalSalary = function (employees) {
-  const selaryArr = Object.values(employees);
-  let salary = 0;
-  for (const selaryCount of selaryArr) {
-    salary += selaryCount;
+  // const selaryArr = Object.values(employees);
+  // let salary = 0;
+  // for (const selaryCount of selaryArr) {
+  //   salary += selaryCount;
+  // }
+  // return salary;
+  let selary = 0;
+  for (const item in employees) {
+    selary += employees[item];
   }
-  return salary;
+  return selary;
 };
 
 /*
